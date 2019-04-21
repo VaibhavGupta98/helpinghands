@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Clothes Detail</h2>
+  <form class="form-horizontal" action="" method="post" #signupForm="ngForm" (ngSubmit)="onSignup(signupForm)">    <div class="form-group">
+      <label class="control-label col-sm-2" for="ctype">Clothes Type:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ctype" placeholder="Enter Clothes Type" name="ctype">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="csize">Clothes Size:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="csize" placeholder="Small/Medium/Large" name="csize">
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="cw">Clothes Wearer:</label>
+        <div class="col-sm-10">          
+          <input type="text" class="form-control" id="cw" placeholder="Ladies/Gents/Kids" name="cw">
+        </div>
+      </div>
+
+      
+          
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="qa">Quantity Available:</label>
+              <div class="col-sm-10">          
+                <input type="text" class="form-control" id="qa" placeholder="Enter Quantity Available" name="qa">
+              </div>
+            </div>
+            
+
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <a router link='/login'><button type="submit" class="btn btn-primary">Submit</button></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
