@@ -1,6 +1,7 @@
 <app-loginheader></app-loginheader>
 <div class="horz">
 <div class="logComPad"></div>
+<flash-messages></flash-messages>
 <h1 align="center">Donate</h1>
 <h2 align= "right">Login as {{ donatorDetail.firstName }} </h2>
 <br>
@@ -29,7 +30,7 @@
 
   <div class="col-lg-3">
       <div class="col-lg-3">
-          <a routerLinkActive="active" routerLinkActiveOptions="{exact.true}" routerLink="/clothes" class="button">
+          <a routerLinkActive="active" routerLinkActiveOptions="{exact.true}" (click)= "onClothesClick()" class="button">
           <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -57,7 +58,7 @@
        
        </div>
        <div class="col-lg-3">
-          <a routerLinkActive="active" routerLinkActiveOptions="{exact.true}" routerLink="/stationery" class="button">
+          <a routerLinkActive="active" routerLinkActiveOptions="{exact.true}" (click)= "onStationaryClick()" class="button">
            <div class="flip-card">
            <div class="flip-card-inner">
              <div class="flip-card-front">
@@ -75,7 +76,7 @@
      
        <div class="col-lg-3">
            <div class="col-lg-3">
-              <a routerLinkActive="active" routerLinkActiveOptions="{exact.true}" routerLink="/miscellaneous" class="button">
+              <a routerLinkActive="active" routerLinkActiveOptions="{exact.true}" (click)= "onMiscellaneousClick()" class="button">
                <div class="flip-card">
                <div class="flip-card-inner">
                  <div class="flip-card-front">

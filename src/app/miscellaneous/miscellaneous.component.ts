@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Route, Router,ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-miscellaneous',
   templateUrl: './miscellaneous.component.html',
@@ -7,13 +7,24 @@ import { Route, Router } from '@angular/router';
 })
 export class MiscellaneousComponent implements OnInit {
 
-  constructor(public route : Router) { }
+  donatorDetail: any
+
+  donorName: String
+
+  constructor(private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
-  }
+    this.route.queryParams.subscribe((params)=>{
+      //console.log(params);
+      this.donatorDetail= JSON.parse(params.Donatordata)
+      this.donorName = this.donatorDetail.firstName
+
+      //console.log(this.donatorDetail)
+      console.log(this.donorName)
+  })}
 
   onSignup(signupForm)
   {
-    this.route.navigate(['/options']);
+    this.router.navigate(['/options']);
   }
 }

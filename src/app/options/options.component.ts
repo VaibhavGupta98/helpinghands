@@ -14,8 +14,32 @@ export class OptionsComponent implements OnInit {
   constructor(private router: Router,private route: ActivatedRoute) { }
 
   onMedicineClick(){
+    console.log(this.donatorDetail.firstName+ ' passed to medicines .ts ')
     this.router.navigate(['/medicines'],{
-      queryParams: {Donatordata: this.donatorDetail.firstName }
+      queryParams: {Donatordata: JSON.stringify(this.donatorDetail) }
+    });
+  }
+
+  onClothesClick(){
+    console.log('name->'+this.donatorDetail.firstName+ ' passed to clothes .ts')
+    this.router.navigate(['/clothes'],{
+      queryParams: {Donatordata: JSON.stringify(this.donatorDetail) }
+    });
+  }
+
+  onStationaryClick(){
+    console.log('inside onStationaryClick')
+    console.log('name->'+this.donatorDetail.firstName+ ' passed to stattionary .ts')
+    this.router.navigate(['/stationery'],{
+      queryParams: {Donatordata: JSON.stringify(this.donatorDetail) }
+    });
+  }
+
+  onMiscellaneousClick(){
+    //console.log('inside onStationaryClick')
+    console.log('name->'+this.donatorDetail.firstName+ ' passed to miscellaneous .ts')
+    this.router.navigate(['/miscellaneous'],{
+      queryParams: {Donatordata: JSON.stringify(this.donatorDetail) }
     });
   }
 

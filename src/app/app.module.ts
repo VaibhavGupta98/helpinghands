@@ -27,6 +27,11 @@ import { LogindonatorComponent } from './logindonator/logindonator.component';
 import { LoginngoComponent } from './loginngo/loginngo.component';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { MedicinesngoComponent } from './medicinesngo/medicinesngo.component';
+import { ClothesngoComponent } from './clothesngo/clothesngo.component';
+import { StationeryngoComponent } from './stationeryngo/stationeryngo.component';
+
 
 const appRoutes:Routes=[
   {path:'',component:PageComponent},
@@ -45,7 +50,10 @@ const appRoutes:Routes=[
   {path:'miscellaneous',component:MiscellaneousComponent},
   {path:'loginngo',component:LoginngoComponent},
   {path:'logindonator',component:LogindonatorComponent},
-  {path:'logingen',component:LogingenComponent}
+  {path:'logingen',component:LogingenComponent},
+  {path: 'medicinesngo',component: MedicinesngoComponent},
+  {path: 'clothesngo',component: ClothesngoComponent},
+  {path: 'stationaryngo',component: StationeryngoComponent}
 
 ]
 
@@ -76,13 +84,17 @@ const appRoutes:Routes=[
     MiscellaneousComponent,
     LogingenComponent,
     LogindonatorComponent,
-    LoginngoComponent
+    LoginngoComponent,
+    MedicinesngoComponent,
+    ClothesngoComponent,
+    StationeryngoComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })
